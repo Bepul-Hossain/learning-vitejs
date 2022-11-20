@@ -1,8 +1,6 @@
 // Import our custom CSS
 import '../../assets/css/style.scss';
 
-import { setupCounter } from './components/counter';
-
 // Import only the Bootstrap components we need
 import { Dropdown, Offcanvas, Popover } from 'bootstrap';
 
