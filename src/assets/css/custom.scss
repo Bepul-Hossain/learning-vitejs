@@ -1,0 +1,248 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+$default: rgba(113, 174, 137, 1);
+$default-40: rgba(113, 174, 137, 0.4);
+$default-15: rgba(113, 174, 137, 0.15);
+$default-5: rgba(113, 174, 137, 0.05);
+
+$theme-soil: rgba(156, 103, 33, 1);
+$theme-soil-50: rgba(156, 103, 33, 0.5);
+$theme-soil-40: rgba(156, 103, 33, 0.4);
+$theme-soil-15: rgba(156, 103, 33, 0.15);
+$theme-soil-5: rgba(156, 103, 33, 0.05);
+
+$theme-production: rgba(124, 132, 90, 1);
+$theme-production-50: rgba(124, 132, 90, 0.5);
+$theme-production-40: rgba(124, 132, 90, 0.4);
+$theme-production-15: rgba(124, 132, 90, 0.15);
+$theme-production-5: rgba(124, 132, 90, 0.05);
+
+$theme-animal: rgba(187, 55, 33, 1);
+$theme-animal-50: rgba(187, 55, 33, 0.5);
+$theme-animal-40: rgba(187, 55, 33, 0.4);
+$theme-animal-15: rgba(187, 55, 33, 0.15);
+$theme-animal-5: rgba(187, 55, 33, 0.05);
+
+$theme-climate: rgba(116, 185, 89, 1);
+$theme-climate-50: rgba(116, 185, 89, 0.5);
+$theme-climate-40: rgba(116, 185, 89, 0.4);
+$theme-climate-15: rgba(116, 185, 89, 0.15);
+$theme-climate-5: rgba(116, 185, 89, 0.05);
+
+$theme-business: rgba(130, 37, 50, 1);
+$theme-business-50: rgba(130, 37, 50, 0.5);
+$theme-business-40: rgba(130, 37, 50, 0.4);
+$theme-business-15: rgba(130, 37, 50, 0.15);
+$theme-business-5: rgba(130, 37, 50, 0.05);
+
+$theme-value: rgba(0, 81, 30, 1);
+$theme-value-50: rgba(0, 81, 30, 0.5);
+$theme-value-40: rgba(0, 81, 30, 0.4);
+$theme-value-15: rgba(0, 81, 30, 0.15);
+$theme-value-5: rgba(0, 81, 30, 0.05);
+
+$custom-theme-colors:(
+  "default": $default,
+  "default-40": $default-40,
+  "default-15": $default-15,
+  "default-5": $default-5,
+
+  "theme-soil": $theme-soil,
+  "theme-soil-50": $theme-soil-40,
+  "theme-soil-40": $theme-soil-40,
+  "theme-soil-15": $theme-soil-15,
+  "theme-soil-5": $theme-soil-5,
+  
+  "theme-production": $theme-production,
+  "theme-production-50": $theme-production-40,
+  "theme-production-40": $theme-production-40,
+  "theme-production-15": $theme-production-15,
+  "theme-production-5": $theme-production-5,
+
+  "theme-animal": $theme-animal,
+  "theme-animal-50": $theme-animal-40,
+  "theme-animal-40": $theme-animal-40,
+  "theme-animal-15": $theme-animal-15,
+  "theme-animal-5": $theme-animal-5,
+
+  "theme-climate": $theme-climate,
+  "theme-climate-50": $theme-climate-40,
+  "theme-climate-40": $theme-climate-40,
+  "theme-climate-15": $theme-climate-15,
+  "theme-climate-5": $theme-climate-5,
+
+  "theme-business": $theme-business,
+  "theme-business-50": $theme-business-40,
+  "theme-business-40": $theme-business-40,
+  "theme-business-15": $theme-business-15,
+  "theme-business-5": $theme-business-5,
+
+  "theme-value": $theme-value,
+  "theme-value-50": $theme-value-40,
+  "theme-value-40": $theme-value-40,
+  "theme-value-15": $theme-value-15,
+  "theme-value-5": $theme-value-5
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+$font-family-sans-serif: 'Press Serif Bold', system-ui, -apple-system, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif-demibold: 'Press Serif DemiBold', 'Press Serif Bold', system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base: 'LF Press Sans', "Helvetica Neue", Arial, sans-serif;
+$font-family-base-demibold: 'LF Press Sans DemiBold', "Helvetica Neue", Arial, sans-serif;
+
+// remove underline from hyperlinks
+$link-hover-decoration: none;
+$border-radius:0;
+$card-border-width: 0; 
+
+//form select styling
+$form-select-padding-x:           2rem;
+$form-select-border-radius:       8px;
+$form-select-bg-position:         left $form-select-padding-x*.3 center;
+$form-select-bg-size:             20px 16px;
+$form-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='rgba(178, 205, 185, 1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M2 5l6 6 6-6'/></svg>");
+
+
+
+$font-size-lg: 30px;
+$lead-font-size: 30px;
+
+//** Global textual link color.
+$link-color:           #71ae89;
+
+
+// text color
+$gray-900: #393939;
+
+
+//** Global textual link color.
+$link-color: #71ae89;
+
+
+
+
+// $h1-font-size: 96px;
+// $h2-font-size: 48px;
+// $h3-font-size: 48px;
+// $h4-font-size: 40px;
+// $h5-font-size: 32px;
+// $h6-font-size: 30px;
+// $font-size-root: 24px;
+// $font-size-sm: 18px;
+
+$h1-font-size: 90px;
+$h2-font-size: 42px;
+$h3-font-size: 42px;
+$h4-font-size: 32px;
+$h5-font-size: 26px;
+$h6-font-size: 24px;
+$font-size-root: 18px;
+$font-size-sm: 12px;
+$small-font-size: 12px;
+
+
+// IMPORT BOOTSTRAP 5
+// ==========================================================================
+// @import './../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+
+@import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+// @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+// @import "~bootstrap/scss/nav";
+// @import "~bootstrap/scss/navbar"; // Requires nav
+// @import "~bootstrap/scss/card";
+// @import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/accordion";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+// @import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal"; // Requires transitions
+// @import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas"; // Requires transitions
+// @import "~bootstrap/scss/placeholders";
+
+// Helpers
+// @import "helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+
+
+//
+// Custom styles
+//
+
+
+:root {
+  --bs-body-font-size: 18px;
+  --bs-body-color: #393939;
+}
+
+
+
+.bg-default{background-color: var(--bs-default);};
+.bg-default-40{background-color: var(--bs-default-40);};
+.bg-default-15{background-color: var(--bs-default-15);};
+.bg-default-5{background-color: var(--bs-default-5);};
+
+.bg-theme-soil{background-color: var(--bs-theme-soil);};
+.bg-theme-soil-40{background-color: var(--bs-theme-soil-40);};
+.bg-theme-soil-15{background-color: var(--bs-theme-soil-15);};
+.bg-theme-soil-5{background-color: var(--bs-theme-soil-5);};
+
+.bg-theme-production{background-color: var(--bs-theme-production);};
+.bg-theme-production-40{background-color: var(--bs-theme-production-40);};
+.bg-theme-production-15{background-color: var(--bs-theme-production-15);};
+.bg-theme-production-5{background-color: var(--bs-theme-production-5);};
+
+.bg-theme-animal{background-color: var(--bs-theme-animal);};
+.bg-theme-animal-40{background-color: var(--bs-theme-animal-40);};
+.bg-theme-animal-15{background-color: var(--bs-theme-animal-15);};
+.bg-theme-animal-5{background-color: var(--bs-theme-animal-5);};
+
+.bg-theme-climate{background-color: var(--bs-theme-climate);};
+.bg-theme-climate-40{background-color: var(--bs-theme-climate-40);};
+.bg-theme-climate-15{background-color: var(--bs-theme-climate-15);};
+.bg-theme-climate-5{background-color: var(--bs-theme-climate-5);};
+
+.bg-theme-business{background-color: var(--bs-theme-business);};
+.bg-theme-business-40{background-color: var(--bs-theme-business-40);};
+.bg-theme-business-15{background-color: var(--bs-theme-business-15);};
+.bg-theme-business-5{background-color: var(--bs-theme-business-5);};
+
+.bg-theme-value{background-color: var(--bs-theme-value);};
+.bg-theme-value-40{background-color: var(--bs-theme-value-40);};
+.bg-theme-value-15{background-color: var(--bs-theme-value-15);};
+.bg-theme-value-5{background-color: var(--bs-theme-value-5);};
+
+
+
+
+$primary:       $default;

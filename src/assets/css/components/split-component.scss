@@ -1,0 +1,33 @@
+@use '../custom.scss' as *;
+
+.split-component{
+    &>a, a:link, a:visited, a:active, a:hover {
+        text-decoration: none;
+        color: unset;
+    }
+    &>a:active, a:hover{
+        
+        color: $link-color;
+    }
+    .big-gutter {
+        --bs-gutter-x: 3rem;
+    }
+
+    .content-narrow{
+        article{
+            width: 100%;
+        }
+    }
+
+    .lead {
+        
+        p,div{
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+    }
+
+
+    
+
+}

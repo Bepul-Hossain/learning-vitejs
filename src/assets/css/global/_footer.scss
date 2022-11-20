@@ -1,0 +1,89 @@
+@use "../custom.scss" as *;
+.footer-parent {
+    background-color: $default-40;
+    background-image: url('../svg/footer-hill.svg');
+    background-position: bottom center;
+    background-size: 3000px;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(sm) {
+        .container{
+            padding-right: calc(var(--bs-gutter-x)*.5);
+            padding-left: calc(var(--bs-gutter-x)*.5);
+        }
+        
+        .col-md-4,  .col-md-8{
+            text-align: center;
+        }
+        
+    }
+
+}
+.footer {
+    &__left {
+        color: $gray-900;
+        padding-right: 4rem !important;
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+            font-size: $font-size-sm;
+        }
+    
+        img{
+            max-width: 90%;
+        }
+        h4{
+            font-family: $font-family-base-demibold;
+        }
+       
+        
+        @include media-breakpoint-down(lg){
+            padding-right: 0px !important;
+        }
+    }
+    &__right {
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+            font-size: $font-size-sm;
+        }
+        ul {
+            padding-left: 0px;
+            li {
+                list-style: none;
+                padding-bottom: 20px;
+               
+                @include media-breakpoint-down(sm) {
+                    font-size: $font-size-sm;
+                    padding-bottom: 10px;
+                }
+                a {
+                    text-decoration: none;
+                    
+                    color:$gray-900;
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .footer__img1{
+            width: 5.77rem;
+            margin-right: 2rem;
+        }
+        .footer__img2{
+           width: 9.5rem;
+        }
+    }
+
+   
+   
+}
+
+.copy-write {
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size-base;
+    line-height: 1.875rem;
+    color: rgba(0, 0, 0, 0.8);
+}

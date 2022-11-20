@@ -1,0 +1,510 @@
+@use "../custom" as *;
+
+div.theme-animal {
+    background-color: $theme-animal;
+    display: flex;
+}
+
+div.theme-soil {
+    background-color: $theme-soil;
+    display: flex;
+}
+
+div.theme-production {
+    background-color: $theme-production;
+    display: flex;
+}
+
+div.theme-climate {
+    background-color: $theme-climate;
+    display: flex;
+}
+
+div.theme-business {
+    background-color: $theme-business;
+    display: flex;
+}
+
+div.theme-value {
+    background-color: $theme-value;
+    display: flex;
+}
+
+div.theme-default {
+    background-color: $default;
+    display: flex;
+}
+
+// ================================================
+//THEME ANIMAL
+// ================================================
+
+body.theme-animal {
+    .theme-page-hero {
+        background-color: $theme-animal-5;
+
+        div.container {
+            div.hero {
+                background-image: url('../svg/6icon/Husdyr.svg');
+
+                div.hero-text {
+                    h1 {
+                        color: $theme-animal;
+                    }
+
+                    a {
+                        color: white;
+                        background-color: $theme-animal-50;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .left-nav {
+        .nav-toggle-button {
+            background-color: $theme-animal;
+
+            .wayfinder {
+                background-image: url('../svg/6icon/Husdyr.svg');
+            }
+        }
+
+        .leftNavMenuOpen {
+            h3 a:link, h3 a:visited, a.selected:link, a:visited.selected, a:active, a:hover{
+                color:$theme-animal;
+            }
+            .left-nav-bg {
+                background-color: $theme-animal-5;
+
+                span.wayfinder {
+                    background-image: url('../svg/6icon/Husdyr.svg');
+                }
+            }
+        }
+    }
+
+    .article-page-hero {
+        div.wayfinder {
+            background-image: url('../svg/6icon/Husdyr.svg');
+        }
+
+    }
+    .card{
+        .wayfinder {
+            background-image: url('../svg/6icon/Husdyr.svg');
+        }
+    }
+}
+
+.card.animal a.card-link{
+    padding-left:58px;
+    background-image:url('../svg/6icon/Husdyr.svg');
+    background-repeat: no-repeat;
+    background-size: 48px;
+    display: block;
+    line-height: 48px;
+}
+
+// ================================================
+// THEME SOIL
+// ================================================
+
+body.theme-soil {
+    .theme-page-hero {
+        background-color: $theme-soil-5;
+
+        div.container {
+            div.hero {
+                background-image: url('../svg/6icon/Jord-og-planter.svg');
+
+                div.hero-text {
+                    h1 {
+                        color: $theme-soil;
+                    }
+
+                    a {
+                        color: white;
+                        background-color: $theme-soil-50;
+                    }
+                }
+            }
+        }
+    }
+
+    .left-nav {
+        .nav-toggle-button {
+            background-color: $theme-soil;
+            .wayfinder {
+                background-image: url('../svg/6icon/Jord-og-planter.svg');
+            }
+            
+        }
+        .leftNavMenuOpen {
+            h3 a:link, h3 a:visited, a.selected:link, a:visited.selected, a:active, a:hover{
+                color:$theme-soil;
+            }
+            .left-nav-bg {
+                background-color: $theme-soil-5;
+                span.wayfinder {
+                    background-image: url('../svg/6icon/Jord-og-planter.svg');
+                }
+            }
+        }
+
+
+    }
+
+    .article-page-hero {
+        div.wayfinder {
+            background-image: url('../svg/6icon/Jord-og-planter.svg');
+        }
+
+    }
+
+    .content-dark {
+        background-color: $theme-soil-40;
+    }
+    
+    .content-light {
+        background-color: $theme-soil-15;
+    }
+
+    .card{
+        .wayfinder {
+            background-image: url('../svg/6icon/Jord-og-planter.svg');
+        }
+    }
+}
+
+
+.card.soil a.card-link{
+    padding-left:58px;
+    background-image:url('../svg/6icon/Jord-og-planter.svg');
+    background-repeat: no-repeat;
+    background-size: 48px;
+    display: block;
+    line-height: 48px;
+}
+
+
+// ================================================
+// THEME PRODUCTION
+// ================================================
+
+body.theme-production {
+    .theme-page-hero {
+        background-color: $theme-production-5;
+
+        div.container {
+            div.hero {
+                background-image: url('../svg/6icon/Nye-produktions-systemer.svg');
+
+                div.hero-text {
+                    h1 {
+                        color: $theme-production;
+                    }
+
+                    a {
+                        color: white;
+                        background-color: $theme-production-50;
+                    }
+                }
+            }
+        }
+        
+
+    }
+   
+
+    .left-nav {
+        .nav-toggle-button {
+            background-color: $theme-production;
+
+            .wayfinder {
+                background-image: url('../svg/6icon/Nye-produktions-systemer.svg');
+            }
+        }
+
+        .leftNavMenuOpen {
+            h3 a:link, h3 a:visited, a.selected:link, a:visited.selected, a:active, a:hover{
+                color:$theme-production;
+            }
+            .left-nav-bg {
+                background-color: $theme-production-5;
+
+                span.wayfinder {
+                    background-image: url('../svg/6icon/Nye-produktions-systemer.svg');
+                }
+            }
+        }
+    }
+
+    .article-page-hero {
+        div.wayfinder {
+            background-image: url('../svg/6icon/Nye-produktions-systemer.svg');
+        }
+
+    }
+
+    .content-dark {
+        background-color: $theme-production-40;
+    }
+    
+    .content-light {
+        background-color: $theme-production-15;
+    }
+    .card{
+        .wayfinder {
+            background-image: url('../svg/6icon/Nye-produktions-systemer.svg');
+        }
+    }
+}
+
+.card.production a.card-link{
+    padding-left:58px;
+    background-image:url('../svg/6icon/Nye-produktions-systemer.svg');
+    background-repeat: no-repeat;
+    background-size: 48px;
+    display: block;
+    line-height: 48px;
+}
+
+
+// ================================================
+// THEME CLIMATE
+// ================================================
+
+body.theme-climate {
+    .theme-page-hero {
+        background-color: $theme-soil-5;
+
+        div.container {
+            div.hero {
+                background-image: url('../svg/6icon/Klima.svg');
+
+                div.hero-text {
+                    h1 {
+                        color: $theme-climate;
+                    }
+
+                    a {
+                        color: white;
+                        background-color: $theme-climate-50;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .left-nav {
+        .nav-toggle-button {
+            background-color: $theme-climate;
+
+            .wayfinder {
+                background-image: url('../svg/6icon/Klima.svg');
+            }
+        }
+
+        .leftNavMenuOpen {
+            h3 a:link, h3 a:visited, a.selected:link, a:visited.selected, a:active, a:hover{
+                color:$theme-climate;
+            }
+            .left-nav-bg {
+                background-color: $theme-climate-5;
+
+                span.wayfinder {
+                    background-image: url('../svg/6icon/Klima.svg');
+                }
+            }
+        }
+    }
+
+    .article-page-hero {
+        div.wayfinder {
+            background-image: url('../svg/6icon/Klima.svg');
+        }
+
+    }
+
+    .content-dark {
+        background-color: $theme-climate-40;
+    }
+    
+    .content-light {
+        background-color: $theme-climate-15;
+    }
+    .card{
+        .wayfinder {
+            background-image: url('../svg/6icon/Klima.svg');
+        }
+    }
+}
+.card.climate a.card-link{
+    padding-left:58px;
+    background-image:url('../svg/6icon/Klima.svg');
+    background-repeat: no-repeat;
+    background-size: 48px;
+    display: block;
+    line-height: 48px;
+}
+
+// ================================================
+// THEME BUSINESS
+// ================================================
+
+body.theme-business {
+    .theme-page-hero {
+        background-color: $theme-business-5;
+
+        div.container {
+            div.hero {
+                background-image: url('../svg/6icon/Forbrug.svg');
+
+                div.hero-text {
+                    h1 {
+                        color: $theme-business;
+                    }
+
+                    a {
+                        color: white;
+                        background-color: $theme-business-50;
+                    }
+                }
+            }
+        }
+    }
+
+    .left-nav {
+        .nav-toggle-button {
+            background-color: $theme-business;
+
+            .wayfinder {
+                background-image: url('../svg/6icon/Forbrug.svg');
+            }
+        }
+
+        .leftNavMenuOpen {
+            h3 a:link, h3 a:visited, a.selected:link, a:visited.selected, a:active, a:hover{
+                color:$theme-business;
+            }
+            .left-nav-bg {
+                background-color: $theme-business-5;
+
+                span.wayfinder {
+                    background-image: url('../svg/6icon/Forbrug.svg');
+                }
+            }
+        }
+    }
+
+    .article-page-hero {
+        div.wayfinder {
+            background-image: url('../svg/6icon/Forbrug.svg');
+        }
+
+    }
+
+    .content-dark {
+        background-color: $theme-business-40;
+    }
+    
+    .content-light {
+        background-color: $theme-business-15;
+    }
+    .card{
+        .wayfinder {
+            background-image: url('../svg/6icon/Forbrug.svg');
+        }
+    }
+}
+
+.card.business a.card-link{
+    padding-left:58px;
+    background-image:url('../svg/6icon/Forbrug.svg');
+    background-repeat: no-repeat;
+    background-size: 48px;
+    display: block;
+    line-height: 48px;
+}
+
+// ================================================
+// THEME VALUE
+// ================================================
+
+body.theme-value {
+    .theme-page-hero {
+        background-color: $theme-value-5;
+
+        div.hero {
+            background-image: url('../svg/6icon/Regler.svg');
+
+            div.container {
+                div.hero-text {
+                    h1 {
+                        color: $theme-value;
+                    }
+
+                    a {
+                        color: white;
+                        background-color: $theme-value-50;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .left-nav {
+        .nav-toggle-button {
+            background-color: $theme-value;
+
+            .wayfinder {
+                background-image: url('../svg/6icon/Regler.svg');
+            }
+        }
+
+        .leftNavMenuOpen {
+            h3 a:link, h3 a:visited, a.selected:link, a:visited.selected, a:active, a:hover{
+                color:$theme-value;
+            }
+            .left-nav-bg {
+                background-color: $theme-value-5;
+
+                span.wayfinder {
+                    background-image: url('../svg/6icon/Regler.svg');
+                }
+            }
+        }
+    }
+
+    .article-page-hero {
+        div.wayfinder {
+            background-image: url('../svg/6icon/Regler.svg');
+        }
+
+    }
+
+    .content-dark {
+        background-color: $theme-value-40;
+    }
+    
+    .content-light {
+        background-color: $theme-value-15;
+    }
+    .card{
+        .wayfinder {
+            background-image: url('../svg/6icon/Regler.svg');
+        }
+    }
+}
+.card.value a.card-link{
+    padding-left:58px;
+    background-image:url('../svg/6icon/Regler.svg');
+    background-repeat: no-repeat;
+    background-size: 48px;
+    display: block;
+    line-height: 48px;
+}

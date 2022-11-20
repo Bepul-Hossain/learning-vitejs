@@ -1,0 +1,55 @@
+@use '../custom.scss' as *;
+
+.image-component {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    figcaption {
+        position: relative;
+
+        .image-credit-box {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .img-fluid {
+        width: 100%;
+    }
+
+    .image-component-textbox {
+        width: 400px;
+        position: absolute;
+        right: 30px;
+        bottom: 30%;
+
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-top: -7px;
+
+        &.width-25 {
+            display: block;
+            width: 25%;
+            margin: auto;
+        }
+
+        &.width-50 {
+            display: block;
+            width: 50%;
+            margin: auto;
+        }
+
+        &.width-75 {
+            display: block;
+            width: 75%;
+            margin: auto;
+        }
+    }
+
+}
+
+.content-narrow.image-component {
+    flex-direction: unset;
+}

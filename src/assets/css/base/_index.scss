@@ -1,0 +1,121 @@
+@use "./../_includes/fonts-lf";
+@use "../custom" as *;
+
+
+body {
+	font-family: $font-family-base;
+    padding-top:60px;
+}
+
+h1, .h1{
+    font-family: $font-family-sans-serif;
+    font-size: $h1-font-size;
+}
+
+h2, .h2, h3, .h3 {
+    font-family: $font-family-base-demibold;
+    font-size: $h2-font-size;
+}
+
+h3, .h3 {
+    font-size: $h3-font-size;
+}
+
+h6, .h6, h5, .h5, h4, .h4{
+    font-family: $font-family-base;
+    font-size: $h4-font-size;
+}
+
+h4, .h4 {
+    font-size: $h4-font-size;
+}
+
+h5, .h5 {
+    font-size: $h5-font-size;
+}
+
+h6, .h6 {
+    font-size: $h6-font-size;
+}
+
+@include media-breakpoint-down(sm) {
+    h1, .h1{
+        font-size: $h2-font-size;
+    }
+    h2, .h2{
+        font-size: $h4-font-size;
+    }    
+    h3, .h3 {
+        font-size: $h5-font-size;
+    }
+    
+    h4, .h4{
+        font-size: $h6-font-size;
+    }
+}
+
+.lead {
+    font-size: $font-size-lg;
+}
+
+
+small, .small {
+    font-size: $font-size-sm;
+}
+
+.container-fluid, .container{
+    margin-top: 2rem;
+    padding: 0;
+    margin-bottom: 2rem;
+
+
+
+    &-no-top-margin{
+        margin-top:0;
+    }
+    &-no-bottom-margin{
+        margin-bottom:0;
+    }
+}
+
+
+
+@include media-breakpoint-down(sm) {
+    section.CompSplitComponent, section.CompGridBlock{
+        .container-fluid, .container{
+            padding-right: calc(var(--bs-gutter-x)*.5);
+            padding-left: calc(var(--bs-gutter-x)*.5);
+        }
+    }
+   
+}
+
+a,a:link,a:visited,a:active,a:hover{
+    color: $link-color;
+}
+a:active,a:hover{
+    color: $default-40; 
+}
+
+
+
+.big-gutter{
+    --bs-gutter-x: 3rem;
+ 
+}
+
+.image-credit-box{
+    margin-top: -20px;
+    height: 20px;
+    background: $default-40;
+    // width: 40px;
+    float: right;
+    font-size: 10px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    align-self: end;
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-style: normal;
+}

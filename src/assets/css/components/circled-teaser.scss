@@ -1,0 +1,24 @@
+@use '../custom.scss' as *;
+.circle{
+    list-style-type: none;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background-color:white;
+    display:flex;
+    align-self:center;  
+    flex-direction:column;
+    margin:auto;
+    justify-content: center;
+    
+}
+.circle-content{
+    width:360px;
+    text-align:center;
+    font-size: $font-size-sm;
+    color:white;
+    h3{
+        font-size: $font-size-root;
+    }
+    
+}

@@ -1,0 +1,22 @@
+@use "../custom.scss" as *;
+
+.bread {
+    ol {
+        padding: 20px 0 10px 0;
+        list-style: none;
+        @include media-breakpoint-down(sm) {
+            margin-top: clamp(-1rem, -2.087rem + 5.7975vw, 0rem);
+
+            padding-left: calc(var(--bs-gutter-x)*.5);
+        }
+        li {
+            font-size: $small-font-size;
+            
+            line-height: 1.2;
+            a {
+                text-decoration: none;
+                color: $default;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@use '../custom.scss' as *;
+@use "./partials/card";
+
+.grid-row{
+    .row{
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+}
+
+
+
+@include media-breakpoint-down(sm) {
+   .CompGridBlock article img{
+    width: 100%;
+    height: auto;
+
+   } 
+}
+
+// for frontpage exception on the title "Hvordan bruger du sitet?"
+#el-33b5ecd3-8654-435b-92c0-aa55f63c23b1 h2{
+    font-family: $font-family-sans-serif-demibold;
+}
+// .my-class {
+//     &:first-child {
+//        padding-left:0;          
+//     }
+
+//     &:last-child {
+//        // your css code             
+//     }
+
+//     &:nth-child(2) {
+//        // your css code             
+//     }
+// }

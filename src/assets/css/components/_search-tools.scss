@@ -1,0 +1,45 @@
+@use "../custom.scss" as *;
+.search__tools {
+    h2 {
+        font-family: "Press Serif";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 120%;
+        color: #393939;
+        margin-top: 87px;
+        padding-bottom: 46px;
+    }
+    select {
+        font-family: "LF Press Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 120%;
+        color: $default !important;
+        padding-bottom: 0.64rem;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 1rem;
+        }
+    }
+    &__input {
+        input {
+            border-radius: 0.5rem !important;
+            margin-right: 0.5rem;
+            &::placeholder {
+                color: #b2cdb9;
+                text-align: center;
+            }
+        }
+        button {
+            border: 1px solid $default;
+            border-radius: 0.5rem !important;
+            font-family: "LF Press Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 120%;
+            color: #ffffff;
+        }
+    }
+}

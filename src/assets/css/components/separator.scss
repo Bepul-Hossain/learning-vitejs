@@ -1,0 +1,17 @@
+@use '../custom.scss' as *;
+
+.separator{
+
+    .display-1{
+        font-family: $font-family-sans-serif;
+        font-size: $h1-font-size;
+
+        @include media-breakpoint-down(sm) {
+            font-size: $h3-font-size;
+        }
+    }  
+    @include media-breakpoint-down(lg) {
+        margin-top: -80px;
+    }
+
+}

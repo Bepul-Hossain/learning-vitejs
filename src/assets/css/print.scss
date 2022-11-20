@@ -1,0 +1,36 @@
+p,
+a,
+h1,
+h2,
+h3,
+img,
+ol,
+ul,
+table {
+    page-break-before: auto;
+    page-break-after: auto;
+    page-break-inside: avoid;
+}
+body{
+    padding-top: unset;
+}
+#header-parent {
+    
+    position: unset !important;
+}
+footer,
+aside,
+.header__right {
+    display: none;
+}
+.content-narrow {
+    article {
+        width: 100%;
+    }
+}
+
+.bread ol, .bread ol li, .bread ol li a{
+    margin: 0;
+    font-size: x-small;
+    line-height: 1rem;
+}

@@ -1,0 +1,115 @@
+@use "../custom.scss" as *;
+.card__design {
+    @include media-breakpoint-down(lg) {
+        margin-right: 4%;
+        margin-top: -70px;
+    }
+
+    @include media-breakpoint-down(md) {
+        --bs-gutter-y: -8rem !important;
+        margin-top: 100px;
+    }
+    
+    @include media-breakpoint-down(sm) {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+            font-size: var(--bs-body-font-size);
+            font-family: $font-family-base-demibold;
+        }
+    }
+    &--1 {
+        &:hover {
+            a {
+                color: $theme-soil;
+            }
+            cursor: pointer;
+        }
+        @include media-breakpoint-down(xxl) {
+            transform: scale(0.6);
+        }
+        @include media-breakpoint-down(lg) {
+            transform: scale(0.5);
+        }
+    }
+
+    &--2 {
+        &:hover {
+            a {
+                color: $theme-production;
+            }
+            cursor: pointer;
+        }
+        @include media-breakpoint-down(xxl) {
+            transform: scale(0.6);
+        }
+        @include media-breakpoint-down(lg) {
+            transform: scale(0.5);
+        }
+    }
+    &--3 {
+        &:hover {
+            a {
+                color: $theme-animal;
+            }
+            cursor: pointer;
+        }
+        @include media-breakpoint-down(xxl) {
+            transform: scale(0.6);
+        }
+        @include media-breakpoint-down(lg) {
+            transform: scale(0.5);
+        }
+    }
+    &--4 {
+        &:hover {
+            a {
+                color: $theme-climate;
+            }
+            cursor: pointer;
+        }
+        @include media-breakpoint-down(xxl) {
+            transform: scale(0.6);
+        }
+        @include media-breakpoint-down(lg) {
+            transform: scale(0.5);
+        }
+    }
+    &--5 {
+        &:hover {
+            a {
+                color: $theme-business;
+            }
+            cursor: pointer;
+        }
+        @include media-breakpoint-down(xxl) {
+            transform: scale(0.6);
+        }
+        @include media-breakpoint-down(lg) {
+            transform: scale(0.5);
+        }
+    }
+    &--6 {
+        &:hover {
+            a {
+                color: $theme-value;
+            }
+            cursor: pointer;
+        }
+        @include media-breakpoint-down(xxl) {
+            transform: scale(0.6);
+        }
+        @include media-breakpoint-down(lg) {
+            transform: scale(0.5);
+        }
+    }
+}

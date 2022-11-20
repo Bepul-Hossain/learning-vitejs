@@ -3,7 +3,6 @@ import '../scss/styles.scss'
 // // Import all of Bootstrap's JS
 // import * as bootstrap from 'bootstrap'
 
-import typescriptLogo from '../assets/typescript.svg'
 import { setupCounter } from './counter'
 
 // Import only the Bootstrap components we need

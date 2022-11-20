@@ -1,0 +1,151 @@
+@use "../custom.scss" as *;
+@use "../../css/_includes/animations" as *;
+.hamburger-animated-icon {
+    width: 27px;
+    height: 20px;
+    @include media-breakpoint-down(sm) {
+        width: clamp(1rem, 0.4565rem + 2.8988vw, 1.5rem);
+        height: clamp(0.7rem, 0.3739rem + 1.7393vw, 1rem);
+    }
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger-animated-icon span {
+    display: block;
+    position: absolute;
+    height: 1.78px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+
+.hamburger-animated-icon span {
+    background: black;
+}
+
+.hamburger-animated-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.hamburger-animated-icon span:nth-child(2) {
+    top: 10px;
+    @include media-breakpoint-down(sm) {
+        top: 7px;
+    }
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.hamburger-animated-icon span:nth-child(3) {
+    top: 20px;
+    @include media-breakpoint-down(sm) {
+        top: 14px;
+    }
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.hamburger-animated-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+    left: 8px;
+    @include media-breakpoint-down(sm) {
+        top: 0px;
+        left: 6px;
+    }
+}
+
+.hamburger-animated-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.hamburger-animated-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 20px;
+    left: 8px;
+    @include media-breakpoint-down(sm) {
+        top: clamp(0.75rem, 0.3424rem + 2.1741vw, 1.125rem);
+        left: 6px;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+}
+.hamburger-menu.open {
+    background-color: #ffffff;
+    display: block;
+    position: fixed;
+    float: right;
+    right: 0px;
+    z-index: 9999;
+    width: 50%;
+    height: 90%;
+    margin-top: 9px;
+    animation: rightToLeft 0.5s linear;
+    @include media-breakpoint-down(lg) {
+        width: 90vw;
+        height: 100vh;
+        margin: 0;
+        margin-top:-3px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 7px;
+            margin: 0;
+            a {
+                padding: 10px;
+                margin: 0;
+                text-decoration: none;
+                font-style: normal;
+                font-weight: 400;
+                font-size: $font-size-lg;
+                line-height: 40px;
+                color: $gray-900;
+                @include media-breakpoint-down(sm) {
+                    font-size: $font-size-base;
+                }
+                &:hover {
+                    color: $default;
+                }
+            }
+        }
+    }
+}

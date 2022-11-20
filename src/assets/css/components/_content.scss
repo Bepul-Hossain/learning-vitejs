@@ -1,0 +1,137 @@
+@use "../custom.scss" as *;
+article {
+    line-height: 1.2;
+
+    figcaption{
+        font-style: italic;
+        
+        figure{
+            margin-top:1rem;
+        }
+    }
+
+    ul, ul ul, ul ul ul{
+        list-style-type: disc; 
+    }
+    ul ul, ul ul ul{
+        margin: 0;
+        padding: 0;
+        margin-left: 20px;
+    }
+}
+.CompContent article {
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    table {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        width: 100%;
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 5px;
+            @include media-breakpoint-down(sm) {
+                font-size: $font-size-sm;
+            }
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    }
+
+
+}
+.content-narrow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    article {
+        width: 50%;
+        margin: auto;
+        display: block;
+        @include media-breakpoint-down(lg) {
+            width: unset;
+            margin: unset;
+            display: unset;
+            padding-right: calc(var(--bs-gutter-x)*.5);
+            padding-left: calc(var(--bs-gutter-x)*.5);
+            iframe{
+                width: 100%;
+                
+            }
+        }
+    
+    }
+}
+/*Exclude when content on grids or split component */
+
+.row .content-narrow {
+    width: unset; 
+    justify-content: unset; 
+    display: unset;
+    article {
+        width: unset;
+    }
+}
+
+
+.align-right {
+    float: right;
+}
+.progress1 {
+    padding: 5px;
+    &--bar {
+        padding-top: 1.5px;
+        padding-bottom: 1.5px;
+        width: 100%;
+    }
+}
+.padding {
+    &--y {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.content-dark {
+    background-color: $default-40;
+    padding:20px 0;
+}
+
+.content-light {
+    background-color: $default-15;
+    padding:20px 0;
+}
+
+.jord-og {
+    position: relative;
+    &-icon {
+        position: absolute;
+        left: 0px;
+        top: -125px;
+        z-index: 10;
+        a img {
+            width: 82px;
+        }
+    }
+}
+
+/*
+For Umbraco Embed Youtube feature in rich text editor
+*/
+
+.embeditem {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.embeditem iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

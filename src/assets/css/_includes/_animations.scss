@@ -1,0 +1,79 @@
+@use "../custom" as *;
+// ==========================================================================
+// ANIMATIONS
+// ==========================================================================
+
+:root {
+	--anim-duration-fast: 100ms;
+	--anim-duration-normal: 250ms;
+	--anim-duration-slow: 400ms;
+}
+@keyframes leftToRight {
+	0% {
+		margin-left: -98%;
+	}
+	100% {
+		margin-left: 0%;
+	}
+}
+@keyframes rightToLeft {
+	0% {
+		margin-right: -98%;
+	}
+	100% {
+		margin-right: 0%;
+	}
+}
+@keyframes bottomToTop {
+	0% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(-6rem);
+	}
+}
+@keyframes topToBottom {
+	0% {
+		transform: translateY(-6rem);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes displaceContent {
+	from {
+		width: 0;
+	}
+	to {
+		width: 20rem;
+	}
+}
+@keyframes displaceContent1 {
+	from {
+		width: 20rem;
+		@include media-breakpoint-between(md, lg) {
+			width: 15rem;
+		}
+	}
+	to {
+		width: 0rem;
+	}
+}
+
+@keyframes opacityZeroToOne {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes leftNavMenuRightToLeft{
+	0% {
+		margin-left: 0%;
+	}
+	100% {
+		margin-left: -100%;
+	}
+}
